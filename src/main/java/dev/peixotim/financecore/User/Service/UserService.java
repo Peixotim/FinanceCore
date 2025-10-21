@@ -1,4 +1,4 @@
-package dev.peixotim.financecore.User;
+package dev.peixotim.financecore.User.Service;
 
 import org.springframework.stereotype.Service;
 

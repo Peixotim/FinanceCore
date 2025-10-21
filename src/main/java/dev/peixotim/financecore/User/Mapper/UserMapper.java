@@ -5,12 +5,32 @@ import dev.peixotim.financecore.User.Model.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Entity {
+public class UserMapper {
 
-    public User toDto(UserDTO dto){
-        User user = new User();
-        user.setName();
-        user.setEmail();
-        user.setPassword();
+    //Passa um dto e retorna um model
+    public User toModel(UserDTO dto){
+        User user = User
+                .builder()
+                .id(dto.getId())
+                .name(dto.getName())
+                .email(dto.getEmail())
+                .password(dto.getPassword())
+                .userType(dto.getUserType())
+                .build();
+
+        return user;
+    }
+
+    //Passa um userDTO e retorna um user
+    public UserDTO toDTo(User user){
+        UserDTO dto = UserDTO.builder()
+                .id(user.getId())
+                .name(user.getName())
+                .email(user.getEmail())
+                .password(user.getPassword())
+                .userType(user.getUserType())
+                .build();
+
+        return dto;
     }
 }

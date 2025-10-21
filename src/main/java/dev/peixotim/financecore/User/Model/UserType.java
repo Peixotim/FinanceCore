@@ -1,4 +1,4 @@
-package dev.peixotim.financecore.User;
+package dev.peixotim.financecore.User.Model;
 
 public enum UserType {
 

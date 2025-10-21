@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres-FinanceCore
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB}
+    volumes:
+      - postgres-data:var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U ${DB_USERNAME} -d ${DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

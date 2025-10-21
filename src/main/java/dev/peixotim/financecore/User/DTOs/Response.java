@@ -1,4 +1,4 @@
 package dev.peixotim.financecore.User.DTOs;
 
-public class Response {
+public record Response(String name,String email,String password,){
 }

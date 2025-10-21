@@ -6,7 +6,7 @@ import dev.peixotim.financecore.User.DTOs.UserDTO;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserRes {
+public class UserRequestResponseMapper {
 
     public UserDTO toUsers(Request request){
             var req =
@@ -25,7 +25,6 @@ public class UserRes {
                         .id(dto.getId())
                         .name(dto.getName())
                         .email(dto.getEmail())
-                        .password(dto.getPassword())
                         .userType(dto.getUserType())
                         .build();
         return response;

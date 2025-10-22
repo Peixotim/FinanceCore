@@ -1,4 +1,4 @@
-package dev.peixotim.financecore.User.Model;
+package dev.peixotim.financecore.user.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -12,10 +12,10 @@ import java.util.UUID;
 
 @Data
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="tb_users")
-@Builder
 public class User {
 
     @Id
@@ -29,6 +29,7 @@ public class User {
 
     @Email
     @Valid
+    @NotBlank
     @Column(name = "email" , length = 140 , unique = true)
     private String email;
 

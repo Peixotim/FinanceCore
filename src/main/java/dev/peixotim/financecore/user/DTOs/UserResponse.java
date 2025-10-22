@@ -1,9 +1,9 @@
-package dev.peixotim.financecore.User.DTOs;
+package dev.peixotim.financecore.user.DTOs;
 
-import dev.peixotim.financecore.User.Model.UserType;
+import dev.peixotim.financecore.user.Model.UserType;
 import lombok.Builder;
 import java.util.UUID;
 
 @Builder
-public record Response(UUID id,String name, String email,UserType userType){
+public record UserResponse(UUID id, String name, String email, UserType userType){
 }

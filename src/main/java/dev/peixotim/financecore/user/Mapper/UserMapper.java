@@ -1,7 +1,7 @@
-package dev.peixotim.financecore.User.Mapper;
+package dev.peixotim.financecore.user.Mapper;
 
-import dev.peixotim.financecore.User.DTOs.UserDTO;
-import dev.peixotim.financecore.User.Model.User;
+import dev.peixotim.financecore.user.DTOs.UserDTO;
+import dev.peixotim.financecore.user.Model.User;
 import org.springframework.stereotype.Component;
 
 @Component

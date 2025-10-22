@@ -1,8 +1,8 @@
-package dev.peixotim.financecore.User.DTOs;
+package dev.peixotim.financecore.user.DTOs;
 
-import dev.peixotim.financecore.User.Model.UserType;
+import dev.peixotim.financecore.user.Model.UserType;
 import lombok.Builder;
 
 @Builder
-public record Request(String name, String email, String password, UserType userType){
+public record UserRequest(String name, String email, String password, UserType userType){
 }

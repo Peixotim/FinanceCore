@@ -1,27 +1,27 @@
-package dev.peixotim.financecore.User.Mapper;
+package dev.peixotim.financecore.user.Mapper;
 
-import dev.peixotim.financecore.User.DTOs.Request;
-import dev.peixotim.financecore.User.DTOs.Response;
-import dev.peixotim.financecore.User.DTOs.UserDTO;
+import dev.peixotim.financecore.user.DTOs.UserRequest;
+import dev.peixotim.financecore.user.DTOs.UserResponse;
+import dev.peixotim.financecore.user.DTOs.UserDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserRequestResponseMapper {
 
-    public UserDTO toUsers(Request request){
+    public UserDTO toUsers(UserRequest userRequest){
             var req =
                     UserDTO.builder()
-                            .name(request.name())
-                            .email(request.email())
-                            .password(request.password())
-                            .userType(request.userType())
+                            .name(userRequest.name())
+                            .email(userRequest.email())
+                            .password(userRequest.password())
+                            .userType(userRequest.userType())
                             .build();
             return req;
     }
 
-    public Response toResponse(UserDTO dto){
+    public UserResponse toResponse(UserDTO dto){
         var response =
-                Response.builder()
+                UserResponse.builder()
                         .id(dto.getId())
                         .name(dto.getName())
                         .email(dto.getEmail())

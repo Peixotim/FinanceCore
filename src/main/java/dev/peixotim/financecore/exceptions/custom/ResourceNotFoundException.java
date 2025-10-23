@@ -1,4 +1,4 @@
-package dev.peixotim.financecore.exceptions;
+package dev.peixotim.financecore.exceptions.custom;
 
 
 import org.springframework.http.HttpStatus;

@@ -22,7 +22,7 @@ public class UserMapper {
     }
 
     //Passa um userDTO e retorna um user
-    public UserDTO toDTo(User user){
+    public UserDTO toDTO(User user){
         UserDTO dto = UserDTO.builder()
                 .id(user.getId())
                 .name(user.getName())

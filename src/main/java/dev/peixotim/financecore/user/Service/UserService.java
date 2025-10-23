@@ -6,6 +6,7 @@ import dev.peixotim.financecore.user.DTOs.UserResponse;
 import dev.peixotim.financecore.user.Mapper.UserMapper;
 import dev.peixotim.financecore.user.Mapper.UserRequestResponseMapper;
 import dev.peixotim.financecore.user.Repository.UserRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -69,6 +70,9 @@ public class UserService {
     public List<UserResponse> findAll(){
         var findAll = repository.findAll();
 
+        if(findAll.isEmpty()){
+            throw new ResourceNotFoundException("No user found in our database !");
+        }
         return findAll.stream()
                 .map(mapper :: toDTO)
                 .map(mapperRes :: toResponse)

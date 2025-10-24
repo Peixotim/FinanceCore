@@ -2,6 +2,7 @@ package dev.peixotim.financecore.user.Controller;
 
 import dev.peixotim.financecore.user.DTOs.UserRequest;
 import dev.peixotim.financecore.user.DTOs.UserResponse;
+import dev.peixotim.financecore.user.Model.UserType;
 import dev.peixotim.financecore.user.Service.UserService;
 import java.util.List;
 import java.util.UUID;
@@ -37,5 +38,10 @@ public class Controller {
     @DeleteMapping("/{name}")
     public ResponseEntity<UserResponse> deleteByName(@PathVariable String name){
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body(service.deleteByName(name));
+    }
+
+    @PatchMapping("/{email}")
+    public ResponseEntity<UserResponse> modifyUserType(@PathVariable String email, @RequestBody UserType userType){
+        return ResponseEntity.status(HttpStatus.OK).body(service.modifyUserType(email,userType));
     }
 }

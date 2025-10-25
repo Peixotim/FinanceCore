@@ -2,7 +2,7 @@ package dev.peixotim.financecore.user.Controller;
 
 import dev.peixotim.financecore.user.DTOs.UserRequest;
 import dev.peixotim.financecore.user.DTOs.UserResponse;
-import dev.peixotim.financecore.user.Model.UserType;
+import dev.peixotim.financecore.user.Entity.UserType;
 import dev.peixotim.financecore.user.Service.UserService;
 import java.util.List;
 import java.util.UUID;

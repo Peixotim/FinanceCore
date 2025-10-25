@@ -18,9 +18,16 @@ financecore/
 │       └── UserResponseDTO.java       # DTO para retorno de dados do usuário
 │
 ├── account/
-│   ├── Account.java                   # Entidade JPA da conta
-│   ├── AccountRepository.java         # Repositório da conta
-│   └── AccountService.java            # Lógica de negócio da conta
+├── Account.java                   # Entidade JPA da conta
+├── AccountRepository.java          # Repositório (interface JPA)
+├── AccountService.java             # Lógica de negócio (depósitos, saques, etc)
+├── AccountController.java          # Endpoints REST da conta (opcional, se houver API própria)
+├── dto/
+│   ├── CreateAccountDTO.java       # DTO para criação de conta
+│   ├── AccountResponseDTO.java     # DTO para retorno de informações da conta
+│   └── UpdateBalanceDTO.java       # DTO para alterar saldo (opcional)
+├── mapper/
+│    └── AccountMapper.java          # Classe utilitária para converter entre entidade e DTO
 │
 ├── transaction/
 │   ├── Transaction.java               # Entidade JPA da transação

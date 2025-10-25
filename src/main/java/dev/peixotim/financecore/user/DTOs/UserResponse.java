@@ -1,6 +1,6 @@
 package dev.peixotim.financecore.user.DTOs;
 
-import dev.peixotim.financecore.user.Model.UserType;
+import dev.peixotim.financecore.user.Entity.UserType;
 import lombok.Builder;
 import java.util.UUID;
 

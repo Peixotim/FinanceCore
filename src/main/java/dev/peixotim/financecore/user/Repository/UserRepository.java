@@ -1,5 +1,5 @@
 package dev.peixotim.financecore.user.Repository;
-import dev.peixotim.financecore.user.Model.User;
+import dev.peixotim.financecore.user.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.UUID;

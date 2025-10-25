@@ -5,7 +5,7 @@ import dev.peixotim.financecore.user.DTOs.UserRequest;
 import dev.peixotim.financecore.user.DTOs.UserResponse;
 import dev.peixotim.financecore.user.Mapper.UserMapper;
 import dev.peixotim.financecore.user.Mapper.UserRequestResponseMapper;
-import dev.peixotim.financecore.user.Model.UserType;
+import dev.peixotim.financecore.user.Entity.UserType;
 import dev.peixotim.financecore.user.Repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

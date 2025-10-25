@@ -1,5 +1,6 @@
-package dev.peixotim.financecore.user.Model;
+package dev.peixotim.financecore.user.Entity;
 
+import dev.peixotim.financecore.account.Entity.Account;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -40,4 +41,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserType userType = UserType.DEFAULT;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Account account;
 }

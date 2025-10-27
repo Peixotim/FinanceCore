@@ -1,5 +1,7 @@
 package dev.peixotim.financecore.account.Service;
 
+import dev.peixotim.financecore.account.DTOs.AccountRequest;
+import dev.peixotim.financecore.account.DTOs.AccountResponse;
 import dev.peixotim.financecore.account.Repository.AccountRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +15,7 @@ public class AccountService {
     }
 
 
-    public Account
+   public AccountResponse createAccount(AccountRequest request){
+
+   }
 }
